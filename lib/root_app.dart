@@ -3,7 +3,7 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:mira/widgets/activities.dart';
 import 'package:mira/widgets/balance_card.dart';
-import 'package:mira/widgets/circle.dart';
+import 'package:mira/widgets/exclusive_card.dart';
 import 'package:mira/widgets/header.dart';
 
 class RootApp extends StatefulWidget {
@@ -21,21 +21,39 @@ class _RootAppState extends State<RootApp> {
     });
   }
 
+  List exclusiveCards = [
+    {
+      "title": "Ashantifest 2.9GB",
+      "description":
+          "Buy the 2.9GB of Data Bundle for just GHc25 and get an extra 500MB bonus valid for 30 days",
+      "price": "GHc25",
+      "image": "assets/chatting.svg"
+    },
+    {
+      "title": "1000MB 30-day pack",
+      "description": "Buy the 1000MB 30-day pack at GHc8.3",
+      "price": "GHc8.3",
+      "image": "assets/begin_chat.svg"
+    },
+    {
+      "title": "150MB 7 day pack",
+      "description": "Buy the 150MB 7-day pack at GHc1.5",
+      "price": "GHc1.5",
+      "image": "assets/ideas.svg"
+    },
+    {
+      "title": "2.5GB 3-day pack",
+      "description": "Buy the 2.5GB 3-day pack at GHc12",
+      "price": "GHc12",
+      "image": "assets/real_life.svg"
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     var headingText = Theme.of(context).textTheme.headline5!.copyWith(
           fontWeight: FontWeight.bold,
         );
-
-    var size = MediaQuery.of(context).size.width;
-    int numberOfGrids() {
-      if (size < 400) {
-        return 1;
-      } else if (size < 680) {
-        return 2;
-      }
-      return 3;
-    }
 
     return Scaffold(
       appBar: header(),
@@ -56,37 +74,16 @@ class _RootAppState extends State<RootApp> {
             padding: const EdgeInsets.symmetric(vertical: 20),
             child: Text("Exclusive offers just for you", style: headingText),
           ),
-          Container(
-            width: double.maxFinite,
-            height: 150,
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 17, 17, 25),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Stack(
-              children: const [
-                Positioned(
-                  top: -70,
-                  left: 50,
-                  child: CircleShape(
-                    width: 20,
-                  ),
-                ),
-                Positioned(
-                  top: -60,
-                  right: -80,
-                  child: CircleShape(
-                    width: 25,
-                  ),
-                ),
-                Positioned(
-                  bottom: -20,
-                  right: 20,
-                  child: CircleShape(
-                    width: 15,
-                  ),
-                ),
-              ],
+          Column(
+            children: List.generate(
+              exclusiveCards.length,
+              (index) {
+                return ExclusiveCard(
+                    title: exclusiveCards[index]['title'],
+                    description: exclusiveCards[index]['description'],
+                    price: exclusiveCards[index]['price'],
+                    image: exclusiveCards[index]['image']);
+              },
             ),
           )
         ],

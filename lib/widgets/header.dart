@@ -11,7 +11,7 @@ AppBar header() {
           const Padding(
             padding: EdgeInsets.only(right: 10),
             child: CircleAvatar(
-              backgroundImage: AssetImage('assets/girl.jpg'),
+              backgroundImage: AssetImage('assets/profile.jpg'),
             ),
           ),
           const Text(
