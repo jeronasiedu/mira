@@ -106,7 +106,7 @@ class BalanceCard extends StatelessWidget {
                               padding: const EdgeInsets.only(right: 5),
                               child: SvgPicture.asset(
                                 'assets/sms.svg',
-                                width: 25,
+                                width: 20,
                               ),
                             ),
                             Text("100 SMS", style: valueText)

@@ -5,8 +5,10 @@ class CircleShape extends StatelessWidget {
   const CircleShape({
     Key? key,
     this.width,
+    this.color,
   }) : super(key: key);
   final double? width;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +19,7 @@ class CircleShape extends StatelessWidget {
         border: Border.fromBorderSide(
           BorderSide(
             width: width ?? 25,
-            color: Colors.white.withOpacity(0.1),
+            color: color ?? Colors.white.withOpacity(0.1),
           ),
         ),
       ),

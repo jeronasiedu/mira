@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.indigo,
+          secondary: const Color(0xFFffb300),
         ),
         appBarTheme: const AppBarTheme(
           elevation: 0,
@@ -27,6 +28,11 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.quicksandTextTheme(
           Theme.of(context).textTheme,
         ),
+        // elevatedButtonTheme: ElevatedButtonThemeData(
+        //   style: ElevatedButton.styleFrom(
+        //     primary: const Color.fromARGB(255, 17, 17, 25),
+        //   ),
+        // ),
       ),
       home: const RootApp(),
     );
