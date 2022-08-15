@@ -23,10 +23,14 @@ AppBar header() {
           ),
           const Spacer(),
           Badge(
-            position: BadgePosition.topEnd(top: -4, end: -4),
-            child: const Icon(
-              FeatherIcons.bell,
-              size: 22,
+            position: BadgePosition.topEnd(top: 6, end: 2),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                FeatherIcons.bell,
+                size: 22,
+              ),
+              splashRadius: 22,
             ),
           )
         ],

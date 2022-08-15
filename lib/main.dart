@@ -28,11 +28,11 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.quicksandTextTheme(
           Theme.of(context).textTheme,
         ),
-        // elevatedButtonTheme: ElevatedButtonThemeData(
-        //   style: ElevatedButton.styleFrom(
-        //     primary: const Color.fromARGB(255, 17, 17, 25),
-        //   ),
-        // ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            primary: const Color(0xDAFFB300),
+          ),
+        ),
       ),
       home: const RootApp(),
     );

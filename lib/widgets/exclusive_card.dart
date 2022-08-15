@@ -85,7 +85,7 @@ class ExclusiveCard extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Colors.indigo,
+                          color: Theme.of(context).colorScheme.secondary,
                         ),
                         borderRadius: BorderRadius.circular(50),
                       ),
