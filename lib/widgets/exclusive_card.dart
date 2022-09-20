@@ -1,7 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:mira/widgets/circle.dart';
 
 class ExclusiveCard extends StatelessWidget {
@@ -25,7 +24,7 @@ class ExclusiveCard extends StatelessWidget {
     return Container(
       width: double.maxFinite,
       margin: const EdgeInsets.only(bottom: 20),
-      height: 170,
+      height: 180,
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 17, 17, 25),
         borderRadius: BorderRadius.circular(8),

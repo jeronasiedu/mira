@@ -22,7 +22,7 @@ class _RootAppState extends State<RootApp> {
   }
 
   List<Widget> pages = [
-    HomePage(),
+    const HomePage(),
     const MoMoPage(),
     const SettingsPage(),
   ];
@@ -52,8 +52,8 @@ class _RootAppState extends State<RootApp> {
             label: "MoMo",
           ),
           BottomNavigationBarItem(
-            icon: Icon(FeatherIcons.settings),
-            label: "profile",
+            icon: Icon(Ionicons.settings_outline),
+            label: "Profile",
           ),
         ],
       ),
