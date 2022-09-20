@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var headingText = Theme.of(context).textTheme.headline5!.copyWith(
+    var headingText = Theme.of(context).textTheme.headline6!.copyWith(
           fontWeight: FontWeight.bold,
         );
     return ListView(
