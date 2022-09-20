@@ -37,8 +37,8 @@ class _RootAppState extends State<RootApp> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: handleTap,
         currentIndex: currentIndex,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+        // showSelectedLabels: false,
+        // showUnselectedLabels: false,
         selectedItemColor: Theme.of(context).colorScheme.secondary,
         unselectedItemColor: Colors.grey,
         type: BottomNavigationBarType.fixed,
